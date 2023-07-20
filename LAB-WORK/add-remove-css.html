@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="para">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias voluptas voluptatibus id assumenda provident molestiae vitae facilis tenetur commodi. Voluptatem officiis neque eum eaque nostrum quia deserunt corrupti qui quos!
+    </p>
+    <button onclick="add()">add</button>
+    <button onclick="add_remove()">add-remove</button>
+    <button onclick="add_remove_add()">add-remove-add</button>
+
+
+    <script>
+        var p = document.getElementById('para');
+        
+        function add()
+        {
+            p.style.color="yellow";
+        }
+        function add_remove()
+        {
+            p.style.color="";
+        }
+
+        function add_remove_add()
+        {
+            if(p.style.color=="")
+            {
+                p.style.color="blue";
+            }
+            else
+            {
+                p.style.color="";
+            }
+        }
+    </script>
+</body>
+</html>

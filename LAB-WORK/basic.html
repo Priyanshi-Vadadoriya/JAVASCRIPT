@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!-- <h1 id="x"></h1> -->
+
+
+
+<h1 id="h">Heading 1</h1>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, deserunt quae? Obcaecati veritatis eius ad quas, reiciendis ipsam, nihil qui porro nesciunt cumque ducimus facilis sequi. Consequuntur vel earum aut.</p>
+
+    <a href="xyz.html" id="a1">Link</a>
+
+    <img src="xyz.jpg" alt="No Image" id="img1">
+
+    <input type="text" id="in"> 
+
+
+    
+    <script>
+       
+
+        document.write("<b>hello priyanshi</b>");
+        console.log('<b>this is console</b>');
+        document.getElementById('x').innerHTML = "<u>hii</u>";
+
+       // popups......
+        window.alert(5+5);
+        window.confirm("are you sure!");
+        window.prompt("5+5=?");
+        alert(h1_tag.id);
+
+        var h1_tag =  document.getElementById('p');
+        var p_tag =  document.getElementById('para');
+        var a_tag =  document.getElementById('a1');
+        var img_tag =  document.getElementById('img1');
+        var input_tag =  document.getElementById('in');
+
+        img_tag.src="priyanshi.jpg";
+        a_tag.href = "abc.html";
+
+        var x=true;
+        document.write(typeof(x));
+    </script>
+</body>
+</html>

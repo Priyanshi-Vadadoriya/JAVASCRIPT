@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <b id="nm" onclick="t()">Hello</b>
+    <b id="nm" onmouseenter="t()" onmouseleave="t1()">Hello</b>
+
+    <!-- <b id="nm" onmouseover="t()" onmouseout="t1()">Hello</b> -->
+
+
+    <script>
+
+        x = document.getElementById('nm');
+    
+        function t()
+        {
+            x.innerHTML = "priyanshi"
+        }
+
+        function t1()
+        {
+            x.innerHTML = "welcome"
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="" value="">
+  <button>submit</button>
+
+  <script>
+
+var btn = document.getElementsByTagName('button')[0];
+
+
+btn.addEventListener('click',()=>{
+    var input = document.getElementsByTagName('input')[0];
+      
+    if(btn.innerHTML=="submit")
+    {
+        btn.innerHTML="reset";
+    }
+    else{
+        btn.innerHTML="submit";
+    }
+  
+})
+var input1 = document.getElementsByTagName('input')[0];
+  
+input1.addEventListener('mouseover',()=>{
+   alert("hii");
+})
+
+    
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+
+    <script>
+    //     let h1_tag = document.getElementById('h');
+    //     let x = 0;
+
+    //     function count() {
+    //         h1_tag.innerHTML = ++x;
+    //         if (x==50)
+    //         {
+    //            clearInterval(c);
+    //         }
+    //     }
+    //   let c = setInterval(count, 100);
+
+
+    x=1;
+    function rec()
+    {
+        if(x<=10)
+        {
+            document.write(x++);
+            //document.write("<br>");
+        }
+        rec();
+    }
+    rec();
+    </script>
+</body>
+</html>

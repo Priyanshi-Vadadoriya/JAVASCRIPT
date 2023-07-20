@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .p{
+            background-color: yellow;
+            color: blue;
+            font-size: 100px;
+            text-align: center;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <h1 onclick="test()">
+        Tops Technology
+    </h1>
+
+
+    <script>
+      
+      function test()
+      {
+
+        var a= document.getElementsByTagName('h1')[0];
+
+        // btn.style.color="red";
+        // btn.style.fontSize="100px";
+       
+        a.classList.add('p');
+      }
+
+    
+    </script>
+</body>
+</html>
