@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="inp1"><br><br>
+
+    <b id=""></b>
+
+    <input type="text" name="" id="inp2"><br><br>
+
+    <input type="button" value="submit" onclick="validate()" >
+
+
+    <script>
+        inp_tag = document.getElementById('inp1');
+        inp1_tag = document.getElementById('inp2');
+        
+        console.log(inp_tag);
+
+        function validate()
+        {
+            if(inp_tag.value== "")
+            {
+                alert("name is valid....!");
+                return false;
+            }
+            if(inp1_tag.value== "")
+            {
+                alert("mobile number is valid....!");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
