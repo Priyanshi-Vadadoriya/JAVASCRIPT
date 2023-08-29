@@ -8,6 +8,7 @@
         .form {
             width: 500px;
             height: 500px;
+            padding: 40px;
             border: 1px solid black;
             margin: 66px auto;
             background-color: black;
@@ -15,17 +16,20 @@
         }
           
         input {
-            width: 80%;
+            width: 75%;
             height: 66px;
             border: 1px solid black;
             font-size: 27px;
             padding-left: 22px;
+            text-align: center;
+            border-radius: 5px;
         }
         
         button {
             width: 13%;
             height: 66px;
             font-size: 22px;
+            border-radius: 5px;
             transform: translateY(-2px);
             display: inline-block;
             cursor: pointer;
@@ -36,18 +40,19 @@
             background-color: white;
             color: black;
             width: 100%;
-            height: 55PX;
-            font-size: 27PX;
+            height: 50px;
+            font-size: 27px;
             margin-left: -33px;
             list-style-type: none;
             text-align: center;
             line-height: 53px;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body> 
     <div class="form">
-        <input type="text" id="i1" value="">
+        <input type="text" id="i1" value="" placeholder="add new">
         <button onclick="test()">Add</button>
    
         <ul id="list">
