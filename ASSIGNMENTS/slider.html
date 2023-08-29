@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    .main
+    {
+        height: 400px;
+        width:100%;
+        position: relative;
+    }
+
+    .div1
+    {
+        height: 200px;
+        width: 200px;
+        border: 3px solid;
+        position: absolute;
+        top: 20%;
+        left: 5%;
+    } 
+    .div2
+    {
+        height: 200px;
+        width: 200px;
+        border: 3px solid;
+        position: absolute;
+        top: 20%;
+        left: 22%;
+    } 
+    .div3
+    {
+        height: 300px;
+        width: 300px;
+        border: 3px solid;
+        position: absolute;
+        top: 13%;
+        left: 40%;
+    }
+    .div4
+    {
+        height: 200px;
+        width: 200px;
+        border: 3px solid;
+        position: absolute;
+        top: 20%;
+        left: 65%;
+    } 
+    .div5
+    {
+        height: 200px;
+        width: 200px;
+        border: 3px solid;
+        position: absolute;
+        top: 20%;
+        left:82%;
+    } 
+    #btn1
+    {
+        height: 50px;
+        width: 50px;
+        border: 2px solid;
+        position: absolute;
+        top: 100%;
+        left: 45%;
+        font-size: 25px;
+    }
+    #btn2
+    {
+        height: 50px;
+        width: 50px;
+        border: 2px solid;
+        position: absolute;
+        top:100%;
+        right: 45%;
+        font-size: 25px;
+    }
+    
+</style>
+
+</head>
+
+<body>
+
+    <div class="main">
+
+
+   <div class="div1"> <img src="img1.jpeg" alt="" height="100%" width="100%" id="img1"> </div>
+   <div class="div2"><img src="img2.jpg" alt="" height="100%" width="100%" id="img2"></div>
+   <div class="div3"><img src="img3.jpg" alt="" height="100%" width="100%" id="img3"></div>
+   <div class="div4"><img src="img4.jpg" alt="" height="100%" width="100%" id="img4"></div>
+   <div class="div5"><img src="img5.webp" alt="" height="100%" width="100%" id="img5"></div>
+
+       <button id="btn1" onclick="bgleft()"><</button>
+       <button id="btn2" onclick="bgright()">></button>
+
+    </div>
+
+
+<script>
+
+
+    img1 = document.getElementById("img1");
+    img2 = document.getElementById("img2");
+    img3 = document.getElementById("img3");
+    img4 = document.getElementById("img4");
+    img5 = document.getElementById("img5");
+  btnright=document.getElementById('btnright');
+  btnleft=document.getElementById('btnleft');
+
+
+
+function  bgleft()
+{
+   if(img1.src.match("img1.jpeg"))
+{
+    img1.src="img2.jpg"
+    img2.src="img3.jpg"
+    img3.src="img4.jpg"
+    img4.src="img5.webp"
+    img5.src="img1.jpeg"
+
+}
+
+else if(img1.src.match("img2.jpg"))
+{
+    img1.src="img3.jpg"
+    img2.src="img4.jpg"
+    img3.src="img5.webp"
+    img4.src="img1.jpeg"
+    img5.src="img2.jpg"
+}
+
+else if(img1.src.match("img3.jpg"))
+{
+    img1.src="img4.jpg"
+    img2.src="img5.webp"
+    img3.src="img1.jpeg"
+    img4.src="img2.jpg"
+    img5.src="img3.jpg"
+}
+
+else if(img1.src.match("img4.jpg"))
+{
+    img1.src="img5.webp"
+    img2.src="img1.jpeg"
+    img3.src="img2.jpg"
+    img4.src="img3.jpg"
+    img5.src="img4.jpg"
+}
+
+else if(img1.src.match("img5.webp"))
+{
+    img1.src="img1.jpeg"
+    img2.src="img2.jpg"
+    img3.src="img3.jpg"
+    img4.src="img4.jpg"
+    img5.src="img5.webp"
+}
+}
+
+function bgright()
+{
+
+    if(img1.src.match("img1.jpeg"))
+   {
+    img1.src="img5.webp"
+    img2.src="img1.jpeg"
+    img3.src="img2.jpg"
+    img4.src="img3.jpg"
+    img5.src="img4.jpg"
+   }
+
+   else if(img1.src.match("img5.webp"))
+   {
+    img1.src="img4.jpg"
+    img2.src="img5.webp"
+    img3.src="img1.jpeg"
+    img4.src="img2.jpg"
+    img5.src="img3.jpg"
+   }
+
+   else if(img1.src.match("img4.jpg"))
+   {
+    img1.src="img3.jpg"
+    img2.src="img4.jpg"
+    img3.src="img5.webp"
+    img4.src="img1.jpeg"
+    img5.src="img2.jpg"
+   }
+
+   else if(img1.src.match("img3.jpg"))
+   {
+    img1.src="img2.jpg"
+    img2.src="img3.jpg"
+    img3.src="img4.jpg"
+    img4.src="img5.webp"
+    img5.src="img1.jpeg"
+   }
+
+   else if(img1.src.match("img2.jpg"))
+   {
+    img1.src="img1.jpeg"
+    img2.src="img2.jpg"
+    img3.src="img3.jpg"
+    img4.src="img4.jpg"
+    img5.src="img5.webp"
+   }
+    
+}
+</script>
+
+
+
+</body>
+
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h" class="h">Hello Tops</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+    <h1 id="h" class="h">Hello</h1>
+
+
+    <script>
+
+        //h1_tag = document.getElementById('h');
+        h1_tag = document.getElementsByClassName('h');
+
+        console.log(h1_tag);
+    
+        h1_tag[0].style.color = "red";
+        h1_tag[1].style.color = "red";
+        h1_tag[2].style.color = "red";
+        h1_tag[3].style.color = "red";
+        h1_tag[4].style.color = "red";
+
+        for(i=0;i<h1_tag.length;i++)
+        {
+
+        if(i%2 == 0)
+        {
+              h1_tag[i].style.color = "coral";
+        }
+
+        else 
+        {
+            h1_tag[i].style.color = "blue";
+        }
+       
+    }
+
+    </script>
+</body>
+</html>
