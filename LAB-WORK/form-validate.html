@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            overflow: hidden;
+        }
+        .main 
+        {
+            height: 100vh;
+            position: relative;
+        }
+        img 
+        {
+            animation: Scale 40s linear infinite;
+        }
+        @keyframes Scale 
+        {
+            100%{transform: scale(1.5);}
+        }
+       .form
+       {
+          height: auto;
+          width: 600px;
+          background-color: rgb(27, 27, 77);
+          position: absolute; 
+          top: 250px;
+          left: 450px;
+          color: aliceblue;
+          padding: 20px 0px;
+       }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+
+        <img src="https://images.unsplash.com/photo-1526169882751-ed7a04feac73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHVycGxlJTIwbmlnaHQlMjBza3l8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="" height="100%" width="100%">
+
+       <div class="form">
+        <div id="text" class="text"></div> <br><br>
+
+        Enter Mail: <input type="email">
+        <input type="submit">
+       </div>
+    </div>
+    
+
+    <script>
+      var syntax= "WELCOME TO GITHUB WE ARE HERE FOR YOU PLEAZ ENTER YOUR EMAIL HERE"; /* type your text here */
+var array = syntax.split("");
+var timer;
+
+function Loop () {
+if (array.length > 0) {
+  document.getElementById("text").innerHTML += array.shift();
+} else {
+  clearTimeout(timer);
+    }
+loopTimer = setTimeout('Loop()',100); /* change 70 for speed */
+
+}
+Loop();
+  </script>
+</body>
+</html>

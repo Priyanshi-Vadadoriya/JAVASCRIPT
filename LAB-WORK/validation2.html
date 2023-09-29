@@ -7,67 +7,72 @@
 </head>
 <body>
 
-   <form onsubmit="return ValidateForm()">
+   <form > 
 
     Name: <input type="text" name="" id="nm" onblur="return ValidateForm()">
     <b id="nmErr"></b>
     <br><br>
-    Mobile: <input type="text" name="" id="mb">
-
-    <br>
-    <br>
-    <!-- <input type="submit" value="Validate" onclick="return ValidateForm()"> -->
-
-
-    <!-- <input type="submit" value="Validate" onclick=" ValidateForm()"> -->
+    Mobile: <input type="text" name="" id="mb" onblur="return ValidateMobile()">
+    <b id="mbErr"></b>
+    <br><br>
+   
    </form>
 
-
-
-
+   
     <script>
 
-        name1 = document.getElementById('nm');
-        nmErr = document.getElementById('nmErr');
-        mobile = document.getElementById('mb');
-        console.log(name1);
-        console.log(name1.value);
-
-        
-        nm_ex = /^[a-zA-Z]{2,4}$/;
-
+        const name1 = document.getElementById('nm');
+        const nmErr = document.getElementById('nmErr');
+        const mobile = document.getElementById('mb');
+        const mbErr = document.getElementById('mbErr');
+       
+        var nm_ex = /^[a-zA-Z]{2,4}$/;
+        var mb_ex = /^[0-9]{10}$/;
         function ValidateForm()
         {
             
-            if( name1.value==  "")
+            if( name1.value=="")
             {
-               //document.write("required..!");
                nmErr.innerHTML =" *Required..!"; 
                nmErr.style.color ="red";
                name1.style.border="2px solid red";
                return false;
-
             }
             else if(!nm_ex.test(name1.value))
             {
                 nmErr.innerHTML =" *min 2 and max 4 Letters only..!"; 
+                nmErr.style.color = "red";
                 return false;
-              
             }
             else 
             {
                 nmErr.innerHTML="";
                 name1.style.border="2px solid green";
+                return true;
+            }
+        }
+        function ValidateMobile()
+        {
+             
+
+            if (mobile.value == "") {
+                mbErr.innerHTML = " *Required..!";
+                mbErr.style.color = "red";
+                mobile.style.border = "2px solid red";
                 return false;
             }
-
-            // if( mobile.value==  "")
-            // {
-            //     alert("Mobile is required...!");
-            //     return false;
-            // }
+            else if (!mb_ex.test(mobile.Value)) {
+                mbErr.innerHTML = " *Enter a valid 10-digit mobile number..!";
+                mbErr.style.color = "red";
+                mobile.style.border = "2px solid red";
+                return false;
+            }
+            else {
+                mbErr.innerHTML = "";
+                mobile.style.border = "2px solid green";
+                return true;
+            }
         }
-
     </script>
     
 </body>
