@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll fun</title>
+    <style>
+       .slider
+       {
+        height: 600px;
+        width: 800px;
+        background-color: lightblue;
+        position: relative;
+       }
+        span{
+            font-size: 33px;
+            padding: 6px 15px 6px 15px;
+            cursor: pointer;
+            background-color: gray;
+            border-radius: 50%;
+            color: white;
+        }
+        #s1
+        {
+            position: absolute;
+            top: 45%;
+            left: 3%;
+        }
+        #s2
+        {
+            position: absolute;
+            top: 45%;
+            left: 90%;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="slider">
+        <span onclick="change()" id="s1"> > </span>
+        <img id="i1" src="image1.jpeg" alt="">
+        <span onclick="pre_change()" id="s2"> < </span>
+    </div>
+     
+    <script>
+        
+        
+        function change()
+        {
+            var img1 = document.getElementById("i1");
+
+            if(img1.src.match("image1.jpeg"))
+            {
+                img1.src="image2.jpg";
+            }
+            else if(img1.src.match("image2.jpg"))
+            {
+                img1.src="image3.jpg";  
+            }
+            else if(img1.src.match("image3.jpg"))
+            {
+                img1.src="image4.jpg";
+            }
+            else if(img1.src.match("image4.jpg"))
+            {
+                img1.src="image5.webp";
+            }
+            else
+            {
+                img1.src="image1.jpeg";
+            }
+            setTimeout(change,1500);
+        }
+        change();
+
+        function pre_change()
+        {
+            var img2 = document.getElementById("i1");
+
+            if(img2.src.match("image1.jpeg"))
+            {
+                img2.src="image5.webp";
+            }
+            else if(img2.src.match("image5.webp"))
+            {
+                img2.src="image4.jpg";  
+            }
+            else if(img2.src.match("image4.jpg"))
+            {
+                img2.src="image3.jpg";
+            }
+            else if(img2.src.match("image3.jpg"))
+            {
+                img2.src="image2.jpg";
+            }
+            else
+            {
+                img2.src="image1.jpeg";
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
